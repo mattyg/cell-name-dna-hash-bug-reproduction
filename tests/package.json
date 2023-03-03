@@ -4,13 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "RUST_BACKTRACE=1 RUST_LOG=holochain::core::ribosome::host_fn::debug=debug TRYORAMA_HOLOCHAIN_PATH=\"holochain\" node --loader ts-node/esm --dns-result-order=ipv4first src/index.ts"
+    "test": "RUST_BACKTRACE=1 NODE_NO_WARNINGS=1 TRYORAMA_LOG_LEVEL=warn RUST_LOG=warn TRYORAMA_HOLOCHAIN_PATH=\"holochain\" node --loader ts-node/esm --dns-result-order=ipv4first src/index.ts"
   },
   "author": "",
   "license": "CAL-1.0",
   "devDependencies": {
-    "@holochain-open-dev/core-types": "^0.4.0",
-    "@holochain/tryorama": "^0.8.0",
+    "@holochain/tryorama": "^0.11.2",
+    "@holochain/client": "^0.12.5",
     "@msgpack/msgpack": "^2.7.0",
     "@types/node": "^4.9.5",
     "@types/tape": "^4.13.2",
